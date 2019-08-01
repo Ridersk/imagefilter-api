@@ -14,12 +14,25 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
 
 * __NPM:__ Gerenciador de pacotes para o NodeJs
 * __Serverless Framework:__ Framework para facilitar a integração entre os produtos AWS, assim, facilitando o ciclo de deploys e "escalabilidade" no aumento de APIs Lambda, linkando os eventos da Api Gateway automaticamente.
+* __AWS SDK:__ Modulo NPM para rodar o programa com o ambiente localmente
 
 ## Configurando Ambiente de Desenvolvimento
 
-### Serverless Framework
+### NPM
 
 * __NodeJs:__ Siga as instruções para a seu Sistema Operacional no link <https://nodejs.org/en/download/>
+* __AWS SDK:__
+
+        # Instalar Modulo
+        npm install aws-sdk --save-dev
+
+* __serverless-apigw-binary:__ Plugin para facilitar mandar arquivos binários para o Api Gateway por uma requisição POST. Instruções |<https://github.com/maciejtreder/serverless-apigw-binary>
+* __UUID__ : Gerar ids aleatórios para as imagens
+
+        npm install uuid
+
+### Serverless Framework
+
 * __Serverless Framework:__
 
         # Instalar o ServerlessFramework
@@ -30,10 +43,6 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
 
         # Deploy para o cloud provider
         serverless deploy
-
-#### Plugins para o Serveless Framework
-
-* __serverless-apigw-binary:__ Plugin para facilitar mandar arquivos binários para o Api Gateway por uma requisição POST. Instruções |<https://github.com/maciejtreder/serverless-apigw-binary>
 
 ### Usuário AWS (IAM)
 
