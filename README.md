@@ -9,12 +9,13 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
 * Amazon IAM
 * Api Gateway
 * Amazon CloudWatch
+* DynamoDB
 
 ## Outras tecnologias utilizadas
 
 * __NPM:__ Gerenciador de pacotes para o NodeJs
 * __Serverless Framework:__ Framework para facilitar a integração entre os produtos AWS, assim, facilitando o ciclo de deploys e "escalabilidade" no aumento de APIs Lambda, linkando os eventos da Api Gateway automaticamente.
-* __AWS SDK:__ Modulo NPM para rodar o programa com o ambiente localmente
+* __AWS SDK:__ Api para controlar os produtos da AWS remotamente
 
 ## Configurando Ambiente de Desenvolvimento
 
@@ -26,10 +27,11 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
         # Instalar Modulo
         npm install aws-sdk --save-dev
 
-* __serverless-apigw-binary:__ Plugin para facilitar mandar arquivos binários para o Api Gateway por uma requisição POST. Instruções |<https://github.com/maciejtreder/serverless-apigw-binary>
+* __[serverless-apigw-binary](https://github.com/maciejtreder/serverless-apigw-binary):__ Plugin para facilitar mandar arquivos binários para o Api Gateway por uma requisição POST.
+
 * __UUID__ : Gerar ids aleatórios para as imagens
 
-        npm install uuid
+* __[serverless-offline](https://www.npmjs.com/package/serverless-offline):__(Opcicional) Plugin para rodar o serverless localmente e conseguir debugar com mais facilidade
 
 ### Serverless Framework
 
@@ -43,6 +45,7 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
 
         # Deploy para o cloud provider
         serverless deploy
+* Referência: <https://serverless.com/>
 
 ### Usuário AWS (IAM)
 
@@ -68,6 +71,19 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
         aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 * __Referência:__ <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html>
+
+#### Criar Role
+
+* Antes de Utilizar a API em sua conta AWS deve-se criar uma role com o seu usuário, que dê permissões para os serviços de lambda-AWS, S3 e DynamoDB.
+* O id dessa role deve ser referenciado na propriedade __role__ de cada __function__ localizada no arquivo de configurações serverless.yml
+
+### Amazon S3
+
+* Deve-se criar um bucket S3 em sua conta da AWS para ser referenciado na váriavel __BUCKET__ Localizada no arquivo /http-handler/services/s3Service.js
+
+### DynamoDB
+
+* Deve-se criar uma tabela na sua conta da AWS para ser referenciado na váriavel __TABLE__ Localizada no arquivo /http-handler/services/dynamodbService.js
 
 ### Utilização
 

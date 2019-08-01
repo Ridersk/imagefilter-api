@@ -14,7 +14,8 @@
 service: http-handler
 # use binary api gateway
 plugins:
- - serverless-apigw-binary
+  - serverless-apigw-binary
+  - serverless-offline
 
 custom:
   apigwBinary:
