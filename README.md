@@ -68,3 +68,7 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
         aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 * __Referência:__ <https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html>
+
+### Utilização
+
+Faça uma requisição para a url <https://uhrnrklvhi.execute-api.us-east-1.amazonaws.com/dev/images> através de uma aplicação cliente, ou algum aplicativo que simule requisições, como o [Postman](https://www.getpostman.com/)

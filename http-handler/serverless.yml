@@ -15,6 +15,7 @@ service: http-handler
 # use binary api gateway
 plugins:
  - serverless-apigw-binary
+
 custom:
   apigwBinary:
     types:           #list of mime-types
