@@ -7,7 +7,7 @@ AWS.config.update({
 
 const S3 = new AWS.S3()
 
-const BUCKET = 'imagefilter-api'
+const BUCKET = 'nanoservices-images-ridersk'
 
 const upload = body => {
     const id = uuid()

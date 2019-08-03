@@ -77,6 +77,10 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
 * Antes de Utilizar a API em sua conta AWS deve-se criar uma role com o seu usuário, que dê permissões para os serviços de lambda-AWS, S3 e DynamoDB.
 * O id dessa role deve ser referenciado na propriedade __role__ de cada __function__ localizada no arquivo de configurações serverless.yml
 
+### Arquitetura do Projeto
+
+![Arch](architecture.png)
+
 ### Amazon S3
 
 * Deve-se criar um bucket S3 em sua conta da AWS para ser referenciado na váriavel __BUCKET__ Localizada no arquivo /http-handler/services/s3Service.js
@@ -84,6 +88,10 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
 ### DynamoDB
 
 * Deve-se criar uma tabela na sua conta da AWS para ser referenciado na váriavel __TABLE__ Localizada no arquivo /http-handler/services/dynamodbService.js
+
+### SNS
+
+* Criar uma notificação quando um objeto é colocado no bucket S3, libera uma notificação para outras três lambdas(De acordo com a arquitetura).
 
 ### Utilização
 
