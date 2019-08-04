@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: thumbnail-handler
+service: filter-handler
 #app: your-app-name
 #tenant: your-tenant-name
 
@@ -57,18 +57,14 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  thumnail:
-    handler: handler.thumbnail
+  filter:
+    handler: handler.filter
     role: arn:aws:iam::155663233752:role/lambda-sqs-s3
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
     events:
       - sns: arn:aws:sns:us-east-1:155663233752:s3-nanoservices-images-put-topic
-
-#    Define function environment variables here
-#    environment:
-#      variable2: value2
 
 # you can add CloudFormation resource templates here
 #resources:

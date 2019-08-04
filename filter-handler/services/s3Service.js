@@ -4,7 +4,7 @@ AWS.config.update({
     region: 'us-east-1'
 })
 
-const BUCKET = 'nanoservices-images-thumbnail-ridersk'
+const BUCKET = 'nanoservices-images-filter-ridersk'
 
 const s3 = new AWS.S3();
 
@@ -27,7 +27,7 @@ const putObject = (buffer, filename) => {
     return new Promise((resolve, reject) => {
         s3.putObject({
             Bucket: BUCKET,
-            Key: 'thumbnail-' + filename,
+            Key: 'filter-' + filename,
             Body: buffer
         }, (err, data) => {
             if (err) {
