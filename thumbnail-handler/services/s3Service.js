@@ -33,7 +33,10 @@ const putObject = (buffer, filename) => {
             if (err) {
                 return reject(err)
             }
-            return resolve(data.Body);
+            return resolve({
+                bucket: BUCKET,
+                key: 'thumbnail-' + filename
+            });
         })
     })
 }

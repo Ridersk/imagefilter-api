@@ -27,13 +27,16 @@ const putObject = (buffer, filename) => {
     return new Promise((resolve, reject) => {
         s3.putObject({
             Bucket: BUCKET,
-            Key: 'filter-' + filename,
+            Key: filename,
             Body: buffer
         }, (err, data) => {
             if (err) {
                 return reject(err)
             }
-            return resolve(data.Body);
+            return resolve({
+                bucket: BUCKET,
+                key: filename
+            });
         })
     })
 }
