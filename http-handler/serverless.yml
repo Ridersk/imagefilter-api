@@ -21,6 +21,7 @@ custom:
   apigwBinary:
     types:           #list of mime-types
       - 'image/jpeg'
+      - 'text/html'
 #app: your-app-name
 #tenant: your-tenant-name
 
