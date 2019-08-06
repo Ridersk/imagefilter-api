@@ -17,6 +17,12 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
 * __Serverless Framework:__ Framework para facilitar a integração entre os produtos AWS, assim, facilitando o ciclo de deploys e "escalabilidade" no aumento de APIs Lambda, linkando os eventos da Api Gateway automaticamente.
 * __AWS SDK:__ Api para controlar os produtos da AWS remotamente
 
+## Utilização
+
+Faça uma requisição para a url <https://uhrnrklvhi.execute-api.us-east-1.amazonaws.com/dev/images> através de uma aplicação cliente, ou algum aplicativo que simule requisições, como o [Postman](https://www.getpostman.com/)
+
+* Lembre-se, na requisição POST para a API, é necessário passar 'Content-Type': 'image/jpeg' dentro do headers do JSON
+
 ## Configurando Ambiente de Desenvolvimento
 
 ### NPM
@@ -90,6 +96,3 @@ Repositório de teste para aprendizado da plataforma da AWS na construção de A
 * Criar uma notificação quando um objeto é colocado no bucket S3, libera uma notificação para outras três lambdas(De acordo com a arquitetura).
 * Colocar o Arn do SNS criado no arquivo serverless.yml do serverless thumnail
 
-### Utilização
-
-Faça uma requisição para a url <https://uhrnrklvhi.execute-api.us-east-1.amazonaws.com/dev/images> através de uma aplicação cliente, ou algum aplicativo que simule requisições, como o [Postman](https://www.getpostman.com/)
