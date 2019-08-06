@@ -15,6 +15,7 @@
     "serverless-offline": "^5.8.0"
   },
   "dependencies": {
+    "elasticsearch": "^16.3.0",
     "uuid": "^3.3.2"
   }
 }
